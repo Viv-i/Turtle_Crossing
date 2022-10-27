@@ -9,7 +9,6 @@ sc.screensize(600, 600)
 sc.tracer(0)
 
 player = Player()
-car = Car()
 
 sc.listen()
 sc.onkey(player.move_up, "w")
@@ -17,9 +16,9 @@ sc.onkey(player.move_up, "w")
 is_alive = True
 while is_alive:
     time.sleep(0.1)
-    car.move()
     sc.update()
-    car.create_car()
+    car = Car()
+    car.move()
 
 
 sc.exitonclick()
