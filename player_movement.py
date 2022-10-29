@@ -10,11 +10,10 @@ class Player(Turtle):
         self.color('white')
         self.setheading(90)
         self.penup()
-        self.goto(0, -300)
-        self.move_up()
+        self.go_to_start()
 
     def move_up(self):
         self.fd(MOVEMENT_SPEED)
-        print(f'moving, currently at y:{self.ycor()}')
 
-
+    def go_to_start(self):
+        self.goto(0, -300)
