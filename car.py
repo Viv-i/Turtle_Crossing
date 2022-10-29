@@ -1,11 +1,12 @@
 from turtle import Turtle
+from player_movement import Player
 import random
 
 COLORS = ["red", 'blue', 'green', 'violet', 'grey', 'white', 'pink', 'yellow']
 MOVEMENT_SPEED = 20
 
 
-class Car:
+class CarManager:
     def __init__(self):
         self.garage = []
 
@@ -33,7 +34,6 @@ class Car:
         for car in self.garage:
             if car.xcor() < -500:
                 self.garage.remove(car)
-        print(len(self.garage))
 
     def move(self):
         for car in self.garage:

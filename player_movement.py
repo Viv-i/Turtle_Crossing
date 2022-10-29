@@ -16,3 +16,5 @@ class Player(Turtle):
     def move_up(self):
         self.fd(MOVEMENT_SPEED)
         print(f'moving, currently at y:{self.ycor()}')
+
+
